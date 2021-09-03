@@ -1,0 +1,3 @@
+/etc/init.d/apache2 start
+
+/usr/share/dirb/wordlists/common.txt
