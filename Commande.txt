@@ -1,0 +1,56 @@
+head -25 fic.txt   Affiche les 25 premieres lignes
+tail fic.txt    Affiche les 10 dernieres lignes
+nl -b fic.txt    Numerote les lignes (y compris les vides) et les affiche
+cat fic.txt | grep hello    Affiche les lignes contenant hello
+sed '1d;4d' test.txt   Supprime les lignes 1 et 4
+sed -n 5,10p test.txt    Affiche lignes 5 a 10    verifier
+sed -n '/^#/p' test.txt     affiche les lignes commencant par #
+sed 's/Amadéo/amadeo/' test.txt    Remplace les Amadéo par amadeo
+sed -z 's/\/n/a/g' test.txt     Remplace les sauts de ligne par a
+iwconfig      Donne infos reseaux
+ifconfig eth0 192.168.0.66       Change IP locale sur shell actuel
+ifconfig eth0 down                             |
+ifconfig eth0 hw ether 00:11:22:33:44:55       | => Change adresse MAC
+ifconfig eth0 up                               |
+dhclient eth0      Change IP depuis serveur DHCP
+dig amazon.com ns     Affiche nom du serveur du site
+dig amazon.com mx     Affiche nom serveur mail du site
+echo "nameserver 8.8.8.8">/etc/resolv.conf     Change DNS
+gedit /etc/hosts           | 
+  192.168.0.66 google.com  | => redirige les users du LAN de google.com vers local website de 192.168.0.66
+passwd   Changer son password
+pwd   Affiche le nom du repertoire courant
+whoami   Affiche nom de l'user
+ls -l   Affiche les droits des fichiers (-a pour montrer les cachés)
+locate aircrack     Affiche la localisation de aircrack
+whereis aircrack   Renvoie binaries et man page de aircrack
+ps aux | grep apache2    Renvoie les processus apache2 tournant
+cat /etc/passwd>>/home/mdp.txt   Envoie le contenu de passwd à la fin du fichier mdp.txt
+touch t.txt    Cree fichier t.txt vide
+mkdir direct1    Cree repertoire direct1
+cp oldfile /newdirectory/newfile    Copie oldfile vers newfile
+mv     Bouge vers autre location ou renomme
+rm oldfile   Supprimme oldfile
+rmdir olddirectory   Supprime olddirectory
+rm -r olddirectory   Supprime olddirectory et son contenu
+kill -9 PIDprocess    Tue le processus de PID=PIDprocess
+fg PIDprocess     Envoie le processus de PID=PIDprocess qu 1er plan
+ps     Affiche les processus en cours
+at 7:30 am   |
+  /root/scan |  => lance le script scan à 7h30 du matin
+ps -aux     Affiche les processus de tous les users
+top    Affiche dynamiquement la liste des processus les plus gourmands
+nice -n -10 /root/script    Met priorité du script à actuelle-10
+renice | -20|  PIDprocess    Redéfinit priorité de PIDprocess à | -20|
+       | 19 |                                                   | 19 |
+env          Affiche les var d'environnement par défaut
+set | more    Affiche toutes les var d'environnement
+nmap -sC -sV -A -p- 10.10.126.77 -T5
+nikto -h https://10.10.78.149:9007
+wpscan --url https://myblog.thm:9007 --disable-tls-checks        Scan le site wordpress
+wpscan --url https://myblog.thm:9007 --disable-tls-checks --enumerate u        Enumère les users de wordpress
+gobuster dir -u <url> -w /usr/share/wordliste/dirbuster/directoy-list-2.3-small.txt
+nmap --script vuln 10.10.114.198
+gobuster dir -w /usr/share/dirb/wordlists/small.txt -u http://10.10.223.37
+hydra -l lin -P locks.txt -s 22 -f 10.10.244.156 ssh
+john -format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
