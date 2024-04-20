@@ -1,0 +1,94 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.25
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://165.227.173.66/ [165.227.173.66]
+[32m[+][0m Started: Wed Apr 10 12:46:07 2024
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: nginx/1.15.12
+ |  - X-Powered-By: PHP/7.2.18
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://165.227.173.66/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: http://165.227.173.66/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://165.227.173.66/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+
+Fingerprinting the version -: |=============================================================================================================================================================|
+[32m[+][0m WordPress version 6.5 identified (Latest, released on 2024-04-02).
+ | Found By: Unique Fingerprinting (Aggressive Detection)
+ |  - http://165.227.173.66/wp-admin/js/common.js md5sum is 8a906c9c1ff651ed1d9d16b191a5df56
+
+[32m[+][0m WordPress theme in use: twentynineteen
+ | Location: http://165.227.173.66/wp-content/themes/twentynineteen/
+ | Latest Version: 2.8 (up to date)
+ | Last Updated: 2024-04-02T00:00:00.000Z
+ | Readme: http://165.227.173.66/wp-content/themes/twentynineteen/readme.txt
+ | Style URL: http://165.227.173.66/wp-content/themes/twentynineteen/style.css?ver=2.8
+ | Style Name: Twenty Nineteen
+ | Style URI: https://wordpress.org/themes/twentynineteen/
+ | Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom sty...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ | Confirmed By: Css Style In 404 Page (Passive Detection)
+ |
+ | Version: 2.8 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://165.227.173.66/wp-content/themes/twentynineteen/style.css?ver=2.8, Match: 'Version: 2.8'
+
+[32m[+][0m Enumerating Users (via Passive and Aggressive Methods)
+
+ Brute Forcing Author IDs -: |==============================================================================================================================================================|
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m j-jonah_jameson
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m severus-deer
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Wed Apr 10 12:46:08 2024
+[32m[+][0m Requests Done: 26
+[32m[+][0m Cached Requests: 74
+[32m[+][0m Data Sent: 8.404 KB
+[32m[+][0m Data Received: 44.13 KB
+[32m[+][0m Memory used: 199.621 MB
+[32m[+][0m Elapsed time: 00:00:01

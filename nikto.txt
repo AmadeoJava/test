@@ -1,0 +1,84 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          165.227.173.66
++ Target Hostname:    165.227.173.66
++ Target Port:        80
++ Start Time:         2024-04-10 14:06:39 (GMT-4)
+---------------------------------------------------------------------------
++ Server: nginx/1.15.12
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ / - Requires Authentication for realm 'Development server'
++ Successfully authenticated to realm 'Development server' with user-supplied credentials.
++ /feU1hbT7.0: Retrieved x-powered-by header: PHP/7.2.18.
++ /feU1hbT7.0: Uncommon header 'x-redirect-by' found, with contents: WordPress.
++ /feU1hbT7/: Drupal Link header found with value: ARRAY(0x5621c7054b90). See: https://www.drupal.org/
++ All CGI directories 'found', use '-C none' to test none
++ /guestbook/?number=5&lng=%3Cscript%3Ealert(document.domain);%3C/script%3E: MPM Guestbook 1.2 and previous are vulnreable to XSS attacks. See: OSVDB-2754
++ /_vti_bin/shtml.dll/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611: Gives info about server settings. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0413,http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0709,http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0710
++ /_vti_bin/shtml.exe/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611: Gives info about server settings. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0413,http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0709,http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0710
++ /_vti_bin/_vti_aut/author.dll?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=false: We seem to have authoring access to the FrontPage web.
++ /_vti_bin/_vti_aut/author.exe?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=false: We seem to have authoring access to the FrontPage web.
++ /cgi.cgi/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /webcgi/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-914/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-915/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /bin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /mpcgi/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-bin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /ows-bin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-sys/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-local/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /htbin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgibin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgis/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /scripts/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-win/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /fcgi-bin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-exe/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-home/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-perl/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /scgi-bin/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-bin-sdb/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-mod/mastergate/search.cgi?search=0&search_on=all: This might be interesting: has been seen in web logs from an unknown scanner.
++ /css/: This might be interesting.
++ /pages/: This might be interesting.
++ /cgi.cgi/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /webcgi/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-914/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-915/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /bin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /mpcgi/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-bin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /ows-bin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-sys/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-local/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /htbin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgibin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgis/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /scripts/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-win/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /fcgi-bin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-exe/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-home/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-perl/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /scgi-bin/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-bin-sdb/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /cgi-mod/rightfax/fuwww.dll/?: This might be interesting: has been seen in web logs from an unknown scanner.
++ /texis.exe/?-dump: Texis installation may reveal sensitive information. See: OSVDB-4314
++ /texis.exe/?-version: Texis installation may reveal sensitive information. See: OSVDB-4314
++ /wp-content/plugins/akismet/readme.txt: The WordPress Akismet plugin 'Tested up to' version usually matches the WordPress version.
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ /license.txt: License file found may identify site software.
++ /: A Wordpress installation was found.
++ /wordpress/: A Wordpress installation was found.
++ /wp-login.php?action=register: Cookie wordpress_test_cookie created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /adfs/ls/?wa=wsignout1.0: Active Directory Federation Services sign out page found.
++ /#wp-config.php#: #wp-config.php# file found. This file contains the credentials.
++ /wordpress/#wp-config.php#: #wp-config.php# file found. This file contains the credentials.
++ 26664 requests: 0 error(s) and 70 item(s) reported on remote host
++ End Time:           2024-04-10 14:24:41 (GMT-4) (1082 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
